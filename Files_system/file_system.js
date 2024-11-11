@@ -49,3 +49,10 @@ fs.appendFile('Files_system/mynewfile1.txt', ' This is my text.', function (err)
   if (err) throw err;
   console.log('mynewfile1 Updated!')
 });
+
+// the fs.writeFile() method replaces the specified file and content
+
+fs.writeFile('Files_system/mynewfile3.txt', 'This is my text', function (err){
+  if (err) throw err;
+  console.log('mynewfile3 Updated!');
+})
