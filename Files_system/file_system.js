@@ -68,3 +68,12 @@ fs.unlink('Files_system/mynewfile2.txt', function(err){
 })
 
 
+//############################################# RENAME FILES ###############################################################
+// to rename a file with the File System module, we use the fs.rename() metod.
+// the fs.rename() method renames the specified file
+
+fs.rename('Files_system/mynewfile1.txt', 'Files_system/myrenamedfile.txt', function(err){
+  if (err) throw err;
+  console.log('File Renamed!');
+})
+
