@@ -56,3 +56,15 @@ fs.writeFile('Files_system/mynewfile3.txt', 'This is my text', function (err){
   if (err) throw err;
   console.log('mynewfile3 Updated!');
 })
+
+//############################################# DELETE FILES ###############################################################
+
+// to delete a file with the File System module, we use the fs.unlink() method.
+// the fs.unlink() method deletes the specified file
+
+fs.unlink('Files_system/mynewfile2.txt', function(err){
+  if (err) throw err;
+  console.log('mynewfile2.txt deleted!');
+})
+
+
