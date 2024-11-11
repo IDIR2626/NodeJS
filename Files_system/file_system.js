@@ -20,7 +20,7 @@ http.createServer(function (req, res) {
 fs.appendFile('Files_system/mynewfile1.txt', 'Hello content!', function (err){
   if (err) throw err;
   //the throw statement throws (generates) an error. When an error occurs, JavaScript will normally stop and generate an error message. The technical term for this is: JavaScript will throw an exception (throw an error).
-  console.log('Saved!');
+  console.log('mynewfile1.txt Saved!');
 })
 
 // create a new file using the open() method
@@ -28,9 +28,24 @@ fs.appendFile('Files_system/mynewfile1.txt', 'Hello content!', function (err){
 
 fs.open('Files_system/mynewfile2.txt', 'w', function (err, file){
   if (err) throw err;
-  console.log('saved!');
+  console.log('mynewfile2.txt saved!');
+})
+
+// create a new, empty file using the writeFile() method
+// the fs.writeFile() method replaces the specified file and content if it exists. If the file does not exist, a new file, containing the specified content, will be created
+
+fs.writeFile('Files_system/mynewfile3.txt', 'Hello content!', function (err){
+  if (err) throw err;
+  console.log('mynewfile3.txt Saved!');
 })
 
 
+//############################################# UPDATE FILES ###############################################################
 
+// the fs.appendFile() method appeends the specified content at the end of the specified file
+// append "this is my text" to the end of the file "mynewfile1.txt"
 
+fs.appendFile('Files_system/mynewfile1.txt', ' This is my text.', function (err){
+  if (err) throw err;
+  console.log('mynewfile1 Updated!')
+});
